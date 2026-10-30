@@ -35,3 +35,20 @@ upc = input("Enter a 12-digit UPC: ")
 first_11 = upc[:11]
 
 actual_check_digit = int(upc[11])
+
+print()
+print(f"The first 11 digits are '{first_11}'.")
+print(f"The provided check digit is '{upc[11]}'.")
+
+print()
+print("Calculating...")
+
+expected_check_digit = find_UPC(first_11)
+print("Expected check digit:", expected_check_digit)
+
+if actual_check_digit == expected_check_digit:
+    print()
+    print("This is a VALID UPC.")
+else:
+    print()
+    print("This is an INVALID UPC.")
